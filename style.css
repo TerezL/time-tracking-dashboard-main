@@ -1,0 +1,188 @@
+body {
+    background-color: hsl(226, 43%, 10%);
+    color: hsl(236, 100%, 87%);
+    font-family:  "Rubik", sans-serif;
+}
+
+main {
+    grid-template-areas: 
+    "user"
+    "work"
+    "play"
+    "study"
+    "exercise"
+    "social"
+    "care";
+    width: 80%;
+    margin: auto;
+    
+}
+.user {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    grid-area: user;
+}
+.hero {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(246, 80%, 60%);
+    padding: 2rem;
+    border-radius: 1rem;
+    justify-content: space-around;
+    position: relative;
+   
+}
+.hero_text {
+    margin-left: 1rem;
+    align-self: center;
+    justify-self: center;
+}
+.hero_text p, h1 {
+    margin: 0;
+}
+.hero_text h1 {
+    font-weight: 300;
+}
+.picjeremy {
+    max-width: 100%;
+    width: 20%;
+    border: solid 0.2rem white;
+    border-radius: 50%;
+}
+.nav {
+    padding: 2rem;
+    background-color: hsl(235, 46%, 20%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 1rem;
+}
+a{
+    text-decoration: none;
+    color: hsl(236, 100%, 87%);
+}
+a:hover {
+    cursor: pointer;
+    color:white;
+}
+.actlink{
+    color: white;
+}
+.icon-ellipsis{
+    max-width: 100%;
+    align-self: center; 
+}
+.text {
+    display: flex;
+    justify-content: space-between;
+}
+.amount {
+    display: flex;
+    justify-content: space-between;
+}
+.amount h1, p {
+    align-self: center; 
+}
+.container {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 1rem;
+    padding: 1rem;
+    z-index: 1;
+    position: relative;
+}
+.icons {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;  
+}
+.title {
+    color: white;
+}
+.amount h1 {
+    color: white;
+    font-weight: 300;
+}
+.header {
+    height: 2.875rem;
+    z-index: 0;
+   
+}
+.work {
+    background-color: hsl(15, 100%, 70%);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    grid-area: work;
+}
+.play {
+    background-color: hsl(195, 74%, 62%);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    grid-area: play;
+}.study {
+    background-color: hsl(348, 100%, 68%);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    grid-area: study;
+}.exercise {
+    background-color: hsl(145, 58%, 55%);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    grid-area: exercise;
+}.social {
+    background-color: hsl(264, 64%, 52%);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    grid-area: social;
+}
+.care {
+    background-color: hsl(43, 84%, 65%);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    grid-area: care;
+}
+
+@media (min-width: 800px){
+    main{
+        
+        display: grid;
+        grid-template-areas: 
+    "user work play study"
+    "user exercise social care";
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .amount {
+        flex-direction: column;
+    }
+    .amount h1, p {
+        align-self: flex-start;
+    }
+    
+    .hero {
+        flex-direction: column;
+    }
+    .picjeremy {
+        width: 30%;
+    }
+    .hero_text {
+        margin: 2rem 0 0 0;
+        align-self: flex-start;
+        width: 50%;
+        line-height: 2rem;
+    }
+    .nav {
+        flex-direction: column;
+        line-height: 2.5rem;
+    }
+    .container:hover {
+        background-color: hsl(235, 45%, 61%);
+        cursor: pointer;
+    }
+}
